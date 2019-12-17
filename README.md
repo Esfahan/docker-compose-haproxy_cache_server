@@ -33,7 +33,7 @@ HAProxy uses port 80, Nginx uses port 8080.
 Modify your hosts to each confs below.
 
 ### Nginx
-Write your application servers.
+Write your web servers.
 
 - rproxy/conf/rproxy.conf
 
