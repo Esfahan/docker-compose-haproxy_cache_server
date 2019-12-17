@@ -8,6 +8,8 @@ HAProxy uses port 80, Nginx uses port 8080.
 - docker-compose 
 
 ## Structure
+This docker-compose is for lb01, 02.  
+You need to make the webservers yourself.
 
                              VIP
     ------------------------------------------------------- 
