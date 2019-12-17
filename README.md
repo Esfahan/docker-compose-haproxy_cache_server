@@ -128,7 +128,7 @@ services:
 ```
 
 ## Usage
-Run
+Run the command below on lb01, lb02.
 
 ```
 $ sudo docker-compose up -d --build
