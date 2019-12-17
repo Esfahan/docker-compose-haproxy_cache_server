@@ -73,7 +73,7 @@ Write your virtual ip-addresses.
 When you create a master server(lb01), modify docker-compose.yml like below.
 
 
-```diff
+```yaml
 version: '3'
 services:
     rproxy:
@@ -100,7 +100,7 @@ services:
 
 For a slave server(lb02), modify it like below.
 
-```diff
+```yaml
 version: '3'
 services:
     rproxy:
