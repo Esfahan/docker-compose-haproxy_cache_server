@@ -128,7 +128,7 @@ services:
 ```
 
 ## Usage
-Run the command below on lb01, lb02.
+Run the command below on lb01, lb02 with modifing docker-compose.yml like above.
 
 ```
 $ sudo docker-compose up -d --build
