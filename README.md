@@ -30,7 +30,7 @@ HAProxy uses port 80, Nginx uses port 8080.
 
 
 ## Settings
-Modify your each confs below.
+Modify your hosts to each confs below.
 
 ### Nginx
 Write your application servers.
@@ -80,15 +80,21 @@ services:
         build: ./rproxy
         hostname: rproxy_app
         network_mode: "host"
+
     # It's for master
     haproxy:
-        build: ./haproxy
-        dockerfile: Dockerfile_lb01
+        build:
+          context: ./haproxy
+          dockerfile: Dockerfile_lb01
+        hostname: haproxy_app
         network_mode: "host"
+
     # It's for slave
     #haproxy:
-    #    build: ./haproxy
-    #    dockerfile: Dockerfile_lb02
+    #    build:
+    #      context: ./haproxy
+    #      dockerfile: Dockerfile_lb02
+    #    hostname: haproxy_app
     #    network_mode: "host"
 ```
 
@@ -101,16 +107,20 @@ services:
         build: ./rproxy
         hostname: rproxy_app
         network_mode: "host"
+
     # It's for master
     #haproxy:
-    #    build: ./haproxy
-    #    dockerfile: Dockerfile_lb01
+    #    build:
+    #      context: ./haproxy
+    #      dockerfile: Dockerfile_lb01
     #    hostname: haproxy_app
     #    network_mode: "host"
+
     # It's for slave
     haproxy:
-        build: ./haproxy
-        dockerfile: Dockerfile_lb02
+        build:
+          context: ./haproxy
+          dockerfile: Dockerfile_lb02
         hostname: haproxy_app
         network_mode: "host"
 ```
