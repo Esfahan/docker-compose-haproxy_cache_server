@@ -1,0 +1,12 @@
+From centos:7
+
+ARG LB=lb01
+RUN yum -y install haproxy keepalived psmisc
+
+COPY files/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg
+COPY files/keepalived/${LB}/keepalived.conf /etc/keepalived/keepalived.conf
+
+COPY files/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod 777 /usr/local/bin/entrypoint.sh
+
+CMD ["entrypoint.sh"]
