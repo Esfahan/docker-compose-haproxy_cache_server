@@ -46,7 +46,7 @@ upstream web {
 ```
 
 ### HAProxy
-Write your nginx servers.
+Write ip-addresses of your nginx servers as the reverse proxies.
 
 - haproxy/files/haproxy/haproxy.cfg
 
